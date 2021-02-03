@@ -1,14 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Healthy Switcher</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-<span>Healthy food</span>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+
+        <nav class="header__nav">
+          <a href="#" class="header__logo logo">
+            <img src="images/logo.png" alt="logo">
+          </a>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">
+                Menu
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__link">
+                Recipes
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__link">
+                Chefs
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#" class="header__link">
+                Contacts
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- style="background-image: url(images/header-bg.jpg);" -->
+
+    <!-- <section class="page-top">
+      <div class="page-top__content">
+        <div class="page-top__text">
+          <p>
+            Your <span>Favourite Food</span>
+          </p>
+          <p>
+            Delivered <span>Hot & Fresh</span>
+          </p>
+        </div>
+
+        <div class="header-bottom__info">
+          <p>
+            <span>Healthy switcher</span> chefs do all the prep work, like peeling, chopping & marinating, so you
+            can cook a fresh
+            homemade dinner in just 15 minutes.
+          </p>
+        </div>
+        <a class="header-bottom__link" href="#">
+          Order Now
+        </a>
+      </div>
+
+      <div class="header-bottom__contacts contacts">
+
+        <div class="contacts__item">
+          <span class="contacts__icon">
+            <svg class="icon" width="21" height="20" viewBox="0 0 21 20">
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.5 0C4.97746 0 0.459015 4.5 0.459015 10C0.459015 15.5 4.97746 20 10.5 20C16.0225 20 20.541 15.5 20.541 10C20.541 4.5 16.0225 0 10.5 0ZM14.7172 14.2L9.4959 11V5H11.0021V10.2L15.5205 12.9L14.7172 14.2Z"
+                  fill="white" />
+              </mask>
+              <g mask="url(#mask0)">
+                <rect x="-2.55328" y="-3" width="26.1066" height="26" fill="white" fill-opacity="0.5" />
+              </g>
+            </svg>
+          </span>
+
+          <time class="contacts__time">
+            Today 10:00 am - 7:00 pm
+          </time>
+          <span class="contacts__span">Working hours</span>
+        </div>
+
+        <div class="contacts__item">
+          <span class="contacts__icon">
+            <svg class="icon" width="18pt" height="18pt" viewBox="0 0 18 18" version="1.1">
+              <g id="surface1">
+                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
+                  d="M 17.644531 0.0664062 C 17.464844 -0.0234375 17.25 -0.0234375 17.070312 0.0664062 L 0.355469 8.425781 C 0.0390625 8.582031 -0.0898438 8.96875 0.0664062 9.289062 C 0.160156 9.46875 0.328125 9.597656 0.527344 9.632812 L 7.160156 10.839844 L 8.367188 17.472656 C 8.417969 17.742188 8.632812 17.953125 8.90625 17.992188 C 8.9375 17.996094 8.96875 18 9 18 C 9.242188 18 9.464844 17.863281 9.574219 17.644531 L 17.933594 0.929688 C 18.089844 0.613281 17.960938 0.226562 17.644531 0.0664062 Z M 17.644531 0.0664062 " />
+              </g>
+            </svg>
+          </span>
+          <a href="#" class="contacts__link">
+            <address class="contacts__address">
+              Velyka Vasylkivska 100
+            </address>
+            <span class="contacts__span">Get Directions</span>
+          </a>
+        </div>
+
+        <div class="contacts__item">
+          <span class="contacts__icon">
+            <svg class="icon" width="18pt" height="18pt" viewBox="0 0 18 18" version="1.1">
+              <g id="surface1">
+                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;"
+                  d="M 16.554688 11.816406 C 15.453125 11.816406 14.371094 11.644531 13.347656 11.304688 C 12.84375 11.132812 12.226562 11.289062 11.917969 11.605469 L 9.894531 13.132812 C 7.546875 11.878906 6.101562 10.433594 4.867188 8.105469 L 6.347656 6.132812 C 6.734375 5.75 6.875 5.1875 6.707031 4.660156 C 6.367188 3.628906 6.195312 2.546875 6.195312 1.445312 C 6.195312 0.648438 5.546875 0 4.75 0 L 1.445312 0 C 0.648438 0 0 0.648438 0 1.445312 C 0 10.574219 7.425781 18 16.554688 18 C 17.351562 18 18 17.351562 18 16.554688 L 18 13.257812 C 18 12.460938 17.351562 11.816406 16.554688 11.816406 Z M 16.554688 11.816406 " />
+              </g>
+            </svg>
+          </span>
+          <a href="#tel:+380638332415" class="contacts__link">
+
+            +38 (063)833 24 15
+
+            <span class="contacts__span">Call Online</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section> -->
+
+
+
+
+    <!-- <div class="title">Hello <span>world</span></div> -->
+
+  </main>
+
+  <footer class="footer">
+
+  </footer>
+
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
