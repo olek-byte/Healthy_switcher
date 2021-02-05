@@ -1,8 +1,7 @@
-<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0C4.97746 0 0.459015 4.5 0.459015 10C0.459015 15.5 4.97746 20 10.5 20C16.0225 20 20.541 15.5 20.541 10C20.541 4.5 16.0225 0 10.5 0ZM14.7172 14.2L9.4959 11V5H11.0021V10.2L15.5205 12.9L14.7172 14.2Z" fill="white"/>
-</mask>
-<g mask="url(#mask0)">
-<rect x="-2.55328" y="-3" width="26.1066" height="26" fill="white" fill-opacity="0.5"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20pt" height="20pt" viewBox="0 0 20 20" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 10 0 C 4.484375 0 0 4.484375 0 10 C 0 15.515625 4.484375 20 10 20 C 15.515625 20 20 15.515625 20 10 C 20 4.484375 15.515625 0 10 0 Z M 10 18.75 C 5.175781 18.75 1.25 14.824219 1.25 10 C 1.25 5.175781 5.175781 1.25 10 1.25 C 14.824219 1.25 18.75 5.175781 18.75 10 C 18.75 14.824219 14.824219 18.75 10 18.75 Z M 10 18.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 10.625 3.75 L 9.375 3.75 L 9.375 10.257812 L 13.308594 14.191406 L 14.191406 13.308594 L 10.625 9.742188 Z M 10.625 3.75 "/>
 </g>
 </svg>

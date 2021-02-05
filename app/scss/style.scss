@@ -6,18 +6,16 @@
 
 .header {
   padding: 32px 0;
+  background-color: transparent;
 
   &__inner {
-    // padding-top: 33px;
-    // padding-bottom: 160px;
-    // position: relative;
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    position: relative;
+    z-index: 200;
 
     &::before {
       content: '';
       position: absolute;
-      top: 82px;
+      bottom: -33px;
       right: 0;
       border-bottom: 1px solid #fff;
       opacity: 0.1;
@@ -26,8 +24,6 @@
   }
 
   &__nav {
-    margin-bottom: 100px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,7 +42,7 @@
   &__link {
     font-size: 14px;
     @extend %helv-700;
-    color:#fff;
+    color: #fff;
     transition: color 0.5s;
 
     &:hover {
@@ -59,13 +55,36 @@
   }
 }
 
-
-
-
 .page-top {
-  text-align: center;
+  position: relative;
+  padding: 100px 0 170px;
+  color: #fff;
 
-  &__text {
+  z-index: 100;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    top: -11%;
+    right: 0;
+    z-index: -5;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  &__title {
     margin-bottom: 20px;
     font-size: 72px;
     @extend %helv-300;
@@ -76,7 +95,7 @@
     }
   }
 
-  &__info {
+  &__descr {
     max-width: 610px;
     @extend %helv-300;
     font-size: 16px;
@@ -90,7 +109,7 @@
   }
 
   &__link {
-    display: inline-block;
+    // display: flex;
     margin-bottom: 112px;
 
     padding: 25px 50px;
@@ -100,28 +119,39 @@
     border-radius: 43px;
     color: #1A1A1A;
     background-color: $accent;
+
     transition: color 0.4s, background-color 0.6s;
 
     &:hover {
       background-color: $text;
       color: $star;
     }
+
+    &:active {
+      background-color: $dish-text;
+    }
   }
 
   &__contacts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: transparent;
   }
 }
 
 .contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 33%;
+
+    text-align: center;
     font-size: 16px;
+    color: #fff;
     @extend %helv-500;
   }
 
@@ -135,7 +165,6 @@
     &:hover {
       color: $accent;
     }
-
   }
 
   &__address {
@@ -149,11 +178,145 @@
     color: #595858;
   }
 
-  // .icon{
-  //   position: absolute;
-  //   top: -25px;
-  //   right: 0;
-  //   display: flex;
-  //   align-items: center;
-  // }
+  .icon {
+    fill: #909090;
+    width: 20px;
+    height: 20px;
+  }
 }
+
+.footer {
+  padding: 30px 0;
+  background-color: #252525;
+
+  &__top {
+    padding-bottom: 36px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid #fff;
+      opacity: 0.1;
+    }
+  }
+
+  &__bottom {
+    padding-top: 30px;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    text-align: center;
+    color: #737373;
+    @extend %helv-500;
+
+
+  }
+}
+
+.about {
+  position: relative;
+  top: -28px;
+  padding: 100px 185px 88px;
+  margin-bottom: 88px;
+  background-color: $slider;
+
+
+  &__title {
+    margin-bottom: 54px;
+    opacity: 0.9;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+}
+
+
+.work {
+  padding-bottom: 120px;
+
+  //bcg
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    min-width: 253px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 24px 24px 44px;
+    background-color: $slider;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    transition: all 0.6s;
+
+    &:hover {
+      background-color: $accent;
+
+      .work__name {
+        color: $bg;
+
+        &::before {
+          border-color: $bg;
+        }
+      }
+
+      .work__text {
+        color: $bg;
+      }
+    }
+  }
+
+  &__name {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    font-size: 22px;
+    @extend %helv-500;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+    color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 2px solid $accent;
+      width: 56px;
+    }
+  }
+
+  &__text {
+    letter-spacing: -0.1625px;
+  }
+}
+

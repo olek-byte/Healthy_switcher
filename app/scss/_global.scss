@@ -32,8 +32,9 @@ body {
   line-height: 2.5;
   letter-spacing: 0.2em;
   text-align: center;
-
+  @extend %helv-300;
   color: $title;
+  text-transform: capitalize;
 
   &::after{
     content: '';
@@ -51,9 +52,13 @@ body {
     right: 50%;
     transform: translate(50%, -50%);
     text-align: center;
+    text-transform: uppercase;
     font-size: 100px;
     line-height: 1.5;
     color: $uppercase;
+    @extend %helv-900;
+    letter-spacing: 0.2em;
+    color: #303030;
 
     z-index: -1;
   }

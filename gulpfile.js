@@ -16,15 +16,15 @@ const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
 
 
-// function html(){
-//   return src(['app/html/pages/*.html'])
-//   .pipe(fileinclude({
-//       prefix: '@@',
-//       basepath: '@file'
-//   }))
-//   .pipe(dest('app'))
-//   .pipe(browserSync.stream());
-// }
+function html(){
+  return src(['app/html/pages/*.html'])
+  .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+  }))
+  .pipe(dest('app'))
+  .pipe(browserSync.stream());
+}
 
 function html() {
   return src('app/*.html')
