@@ -6,20 +6,33 @@ $(function () {
     slidesToScroll: 2,
     dots: false,
     arrows: true,
- 
-
-    // autoplay: true,
-    // autoplaySpeed: 2000
+    appendArrows: $('.about__btns'),
+    prevArrow: '<button type="button" class="slick-prev"><svg width="35" height="35" viewBox="0 0 35 35"><path fill - rule = "evenodd" clip - rule = "evenodd"d = "M34.8297 18.6013H5.12463L19.3955 32.942L17.7539 34.5917L0.680359 17.4347L17.7562 0.27533L19.3979 1.925L5.12463 16.268H34.8297V18.6013Z" / ></svg></button >',
+    nextArrow: '<button type="button" class="slick-next"><svg width="35" height="35" viewBox="0 0 35 35"><path fill - rule = "evenodd" clip - rule = "evenodd" d = "M34.1494 17.4347L17.0735 34.594L15.4319 32.9443L29.7028 18.6037H0V16.2703H29.7051L15.4319 1.925L17.0735 0.27533L34.1494 17.4347Z"/></svg></button>',
+    autoplay: true,
+    autoplaySpeed: 2000
   });
 
 
-    //  $(".star").rateYo({
-    //    starWidth: "20px",
-    //    normalFill: "#ccccce",
-    //    ratedFill: "#ffc35b",
-    //    readOnly: true,
-    //    starSvg: ' <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18pt" height="16pt" viewBox="0 0 18 16" version="1.1"><g id="surface1"><path d="M 8.101562 0.554688 L 6.0625 4.695312 L 1.496094 5.359375 C 0.679688 5.476562 0.351562 6.488281 0.945312 7.066406 L 4.246094 10.285156 L 3.464844 14.832031 C 3.324219 15.652344 4.191406 16.269531 4.914062 15.882812 L 9 13.738281 L 13.085938 15.882812 C 13.808594 16.265625 14.675781 15.652344 14.535156 14.832031 L 13.753906 10.285156 L 17.054688 7.066406 C 17.648438 6.488281 17.320312 5.476562 16.503906 5.359375 L 11.9375 4.695312 L 9.898438 0.554688 C 9.53125 -0.179688 8.472656 -0.191406 8.101562 0.554688 Z M 8.101562 0.554688 " /></g></svg>'
-    //  });
+  $(".star").rateYo({
+    starWidth: "20px",
+    ratedFill: "#F9AD3D",
+    numStars: 5,
+    spacing: "5px",
+  });
+
+
+  new ImageZoom(document.getElementById("img-container"), {
+    width: 160,
+    zoomWidth: 400,
+    offset: {
+      vertical: 0,
+      horizontal: 10
+    }
+  });
+
+
 
 });
+
 

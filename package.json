@@ -18,12 +18,12 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "rateyo": "^2.3.2"
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "mixitup": "^3.3.1",
-    "rateyo": "^3.0.0-alpha.2",
     "slick-carousel": "^1.8.1"
   },
   "description": ""
