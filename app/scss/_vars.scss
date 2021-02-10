@@ -10,52 +10,5 @@ $dish-text: #85878C;
 $star: #F9AD3D;
 $accent-block: #4D4D4D;
 
-%helv-900 {
-  font-family: 'Helvetica Neue-Black', sans-serif;
-  font-weight: 900;
-}
-
-%helv-700 {
-  font-family: 'Helvetica Neue-Bold', sans-serif;
-  font-weight: 700;
-}
-
-%helv-500 {
-  font-family: 'Helvetica Neue-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%helv-400 {
-  font-family: 'Helvetica Neue-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%helv-300 {
-  font-family: 'Helvetica Neue-Light', sans-serif;
-  font-weight: 300;
-}
-
-%btn {
-  padding: 16px 32px 14px;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-size: 10px;
-
-  @extend %helv-900;
-  letter-spacing: 0.2em;
-
-  border: 2px solid #303030;
-  border-radius: 30px;
-  color: #929292;
-  cursor: pointer;
-  transition: all 0.5s;
-
-  &:hover {
-    background-color: $accent;
-    color: $slider;
-  }
-
-  &:active {
-    background-color: $accent-block;
-  }
-}
+// $black-900: #000;
+// $black-800: #252525;

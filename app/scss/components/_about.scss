@@ -1,0 +1,91 @@
+.about {
+  padding-bottom: 100px;
+
+  &__inner {
+    padding: 100px 186px 90px;
+    background-color: $slider;
+    border-radius: 6px;
+  }
+
+  &__title {
+    margin-bottom: 54px;
+    opacity: 0.9;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    position: relative;
+
+    .slick-prev,
+    .slick-next {
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid #303030;
+      fill: #303030;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 18px;
+
+      position: absolute;
+      z-index: 100;
+      transform: translateY(100%);
+      top: 50px;
+      transition: all 0.4s;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover {
+        fill: $accent;
+        border-color: $accent;
+      }
+
+      &:focus {
+        fill: $star;
+        border-color: $star;
+      }
+
+      &:active {
+        fill: $text;
+        border-color: $text;
+      }
+
+    }
+
+    .slick-prev {
+      left: -17%;
+    }
+
+    .slick-next {
+      right: -17%;
+    }
+  }
+
+  &__item {
+    margin: 0 16px;
+
+    a {
+      display: block;
+      transition: opacity 0.6s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

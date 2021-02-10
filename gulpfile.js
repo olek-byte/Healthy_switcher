@@ -14,16 +14,44 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const fileinclude = require('gulp-file-include');
+const svgSprite = require('gulp-svg-sprite');
 
 
-function html(){
+function svgSprites() {
+  return src('app/images/icons/**.svg')
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [{
+            removeStyleElement: true
+          },
+          {
+            removeAttrs: {
+              attrs: '(fill|data-name|xmlns|stroke|version|encoding)'
+            }
+          }
+        ]
+      })
+    ]))
+
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: '../sprite.svg'
+        }
+      }
+    }))
+    .pipe(dest('app/images'))
+}
+
+
+function html() {
   return src(['app/html/pages/*.html'])
-  .pipe(fileinclude({
+    .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
-  }))
-  .pipe(dest('app'))
-  .pipe(browserSync.stream());
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream());
 }
 
 function html() {
@@ -118,6 +146,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/main.js'], scripts);
   watch(['app/*.html'], html);
+  watch(['app/images/sprite/*.svg'], svgSprites);
 }
 
 exports.html = html;
@@ -136,4 +165,4 @@ exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(html, styles, scripts, browsersync, watching);
+exports.default = parallel(html, styles, scripts, svgSprites, browsersync, watching);

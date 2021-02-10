@@ -1,0 +1,92 @@
+.chefs {
+  padding-top: 100px;
+  padding-bottom: 130px;
+  background-color: $bg;
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .chef-card {
+    &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      display: block;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &__avatar {
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    a {
+
+      &:hover {
+        .chef-card__name {
+          color: $accent;
+        }
+      }
+
+      &:focus {
+        .chef-card__name {
+          color: $star;
+        }
+      }
+    }
+
+    &__name {
+      margin-bottom: 6px;
+      letter-spacing: -0.225px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      transition: color 0.5s;
+
+    }
+
+    &__position {
+      letter-spacing: -0.15px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__works {
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 30px;
+
+
+    }
+
+    &__img {
+      border-radius: 2px;
+    }
+  }
+}
+
+
+// .js-image-zoom__zoomed-area{
+//   background-color: grey;
+//   opacity: 0.3;
+//   z-index:10;
+// }
+
+// .js-image-zoom__zoomed-image{
+//   z-index:10;
+// }

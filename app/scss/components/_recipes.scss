@@ -1,0 +1,262 @@
+.recipes {
+  padding-bottom: 120px;
+  background-color: $bg;
+
+  &__title {
+    margin-bottom: 120px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+    grid-row: span 1;
+
+    &:nth-child(1) {
+      grid-row: span 3;
+    }
+  }
+
+  .recipes-card {
+    position: relative;
+    max-width: 540px;
+
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &__link {
+      padding: 72px 90px;
+      display: block;
+
+      &:hover {
+        .icon {
+          fill: $accent;
+        }
+
+        .recipes-card__title {
+          background-color: rgba(0, 0, 0, 1.25);
+          color: $accent;
+        }
+      }
+
+      &:focus {
+        .recipes-card__title {
+          background-color: #000;
+          color: $star;
+        }
+
+        .recipes-card__icon {
+          opacity: 1;
+
+          svg {
+            fill: $star;
+          }
+        }
+
+        .recipes-card__bottom {
+          svg {
+            fill: $star;
+          }
+        }
+      }
+    }
+
+    &--grey {
+      background-color: $slider;
+      background-image: none;
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: $accent;
+      }
+
+      .recipes-card__link {
+        padding: 32px 30px 24px;
+        transition: color 0.5s;
+
+        &:hover {
+          color: $slider;
+
+          .icon {
+            fill: $slider;
+          }
+        }
+      }
+
+      .recipes-card__text {
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .recipes-card__bottom {
+        justify-content: space-between;
+      }
+
+      .recipes-card__left {
+        display: flex;
+        align-items: center;
+      }
+
+      .recipes-card__title {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+
+      .recipes-card__time {
+        margin-bottom: 0;
+      }
+
+      .recipes-card__right {
+        display: flex;
+      }
+
+
+    }
+
+    &--image {
+      position: relative;
+      background-color: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        // background-image: url('../images/recipes-card-bg-2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
+
+      .recipes-card__link {
+        position: relative;
+        z-index: 100;
+
+        &:hover {
+          color: #fff;
+
+          .icon {
+            fill: $accent;
+          }
+        }
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+      padding: 13px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      border-radius: 50%;
+      background-color: #000;
+      opacity: 0.3;
+      border: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    &__title {
+      margin-bottom: 70px;
+      padding: 8px 14px 6px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+
+
+      text-transform: uppercase;
+      font-size: 10px;
+      background-color: rgba(0, 0, 0, 0.25);
+      transition: all 0.5s;
+    }
+
+    &__time {
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 1.7;
+      margin-bottom: 45px;
+    }
+
+    &__author {
+      margin-bottom: 70px;
+      display: block;
+
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__view {
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__numbers {
+      margin-left: 12px;
+    }
+
+    &__comments {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .icon {
+      fill: #fff;
+      transition: fill 0.5s;
+
+      &--arrow {
+        width: 13px;
+        height: 13px;
+      }
+
+      &--view {
+        width: 22px;
+        height: 15px;
+      }
+
+      &--chat {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+}
+
+
