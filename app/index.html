@@ -7,574 +7,674 @@
   <title>Healthy Switcher</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <div class="wrapper">
-
-    <header class="header">
-      <div class="header__inner">
-        <div class="container">
-
-          <nav class="header__nav">
-            <a href="#" class="header__logo logo">
-              <img src="images/logo.png" alt="logo">
-            </a>
-
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#" class="header__link">
-                  Menu
-                </a>
-              </li>
-
-              <li class="header__item">
-                <a href="#" class="header__link">
-                  Recipes
-                </a>
-              </li>
-
-              <li class="header__item">
-                <a href="#" class="header__link">
-                  Chefs
-                </a>
-              </li>
-
-              <li class="header__item">
-                <a href="#" class="header__link">
-                  Contacts
-                </a>
-              </li>
-
-            </ul>
-          </nav>
 
 
-        </div>
+  <header class="header">
+    <div class="header__inner">
+      <div class="container">
+
+        <nav class="header__nav">
+
+
+          <button class="btn-toggle js__nav-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </button>
+
+
+          <a href="#" class="header__logo logo">
+            <img src="images/logo.png" alt="logo">
+          </a>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#dishes" class="header__link">
+                Menu
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#recipes" class="header__link">
+                Recipes
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#chefs" class="header__link">
+                Chefs
+              </a>
+            </li>
+
+            <li class="header__item">
+              <a href="#social" class="header__link">
+                Contacts
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="main">
 
-      <h1 class="main__title">Healthy switcher</h1>
+  <main class="main">
 
-      <section class="page-top">
-        <div class="container">
-          <div class="page-top__content">
-            <div class="page-top__title">
+
+    <h1 class="main__title">Healthy switcher</h1>
+
+    <section class="page-top">
+      <div class="page-top__bg" style="background-image: url('images/header-bg.jpg');"> </div>
+      <div class="container">
+        <div class="page-top__content">
+          <a href="#">
+            <h2 class="page-top__title">
               Your <span>Favourite Food</span>
               Delivered <span>Hot & Fresh</span>
-            </div>
+            </h2>
+          </a>
 
-            <div class="page-top__descr">
-              <span>Healthy switcher</span> chefs do all the prep work, like peeling, chopping & marinating, so you
-              can cook a fresh
-              homemade dinner in just 15 minutes.
-            </div>
-            <a class="page-top__link" href="#">
-              Order Now
-            </a>
+          <p class="page-top__descr">
+            <span>Healthy switcher</span> chefs do all the prep work, like peeling, chopping & marinating, so you
+            can cook a fresh
+            homemade dinner in just 15 minutes.
+          </p>
+
+          <a class="page-top__link" href="#form1">
+            Order Now
+          </a>
+
+          <a class="overlay" id="form1" href="#x"></a>
+          <form class="modal">
+            <input class="modal__name" name="name" placeholder="Your name:" required>
+            <input class="modal__email" name="email address" placeholder="Your Email:" type="email" required>
+            <textarea class="modal__message" name="subject" placeholder="Your message:" required></textarea>
+            <input class="modal__btn" name="submit" type="submit" value="Отправить">
+          </form>
+
+        </div>
+
+
+        <address class="page-top__address">
+          <ul class="page-top__contacts contacts">
+
+            <li class="contacts__item">
+              <a href="#" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--clock">
+                    <use xlink:href="images/sprite.svg#clock"></use>
+                  </svg>
+                </span>
+                <time class="contacts__time" datetime="10:00-19:00">
+                  Everyday 10:00 am - 7:00 pm
+                </time>
+                <span class="contacts__span">Working hours</span>
+              </a>
+            </li>
+
+            <li class="contacts__item contacts__item--middle">
+              <a href="#" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--nav">
+                    <use xlink:href="images/sprite.svg#nav"></use>
+                  </svg>
+                </span>
+                <span class="contacts__address">
+                  Sumy street 15, Kharkiv
+                </span>
+                <span class="contacts__span">Get Directions</span>
+              </a>
+            </li>
+
+            <li class="contacts__item">
+              <a href="#tel:+380638332415" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--tel">
+                    <use xlink:href="images/sprite.svg#call"></use>
+                  </svg>
+                </span>
+                <span>
+                  +38 (063)833 24 15
+                </span>
+                <span class="contacts__span">Call Online</span>
+              </a>
+            </li>
+
+          </ul>
+        </address>
+
+      </div>
+
+
+    </section>
+
+    <a class="scrollup js__scrollup">
+      <!-- <svg class="icon icon--scrollup">
+        <use xlink:href="images/sprite.svg#scrollup">
+        </use>
+      </svg> -->
+     
+      <svg width="15pt" height="15pt"
+        viewBox="0 0 15 15">
+          <path
+            d="M 7.441406 9.519531 C 6.308594 9.519531 5.394531 8.601562 5.394531 7.472656 C 5.394531 6.339844 6.308594 5.421875 7.441406 5.421875 C 8.574219 5.421875 9.488281 6.339844 9.488281 7.472656 C 9.488281 8.601562 8.574219 9.519531 7.441406 9.519531 Z M 7.441406 6.589844 C 6.957031 6.589844 6.5625 6.988281 6.5625 7.472656 C 6.5625 7.953125 6.957031 8.347656 7.441406 8.347656 C 7.925781 8.347656 8.320312 7.953125 8.320312 7.472656 C 8.320312 6.988281 7.925781 6.589844 7.441406 6.589844 Z M 10.546875 11.925781 L 9.722656 11.09375 L 7.472656 13.34375 L 5.308594 11.183594 L 4.480469 12.011719 L 7.472656 15 Z M 10.546875 3.074219 L 7.472656 0 L 4.453125 3.019531 L 5.277344 3.847656 L 7.472656 1.65625 L 9.722656 3.90625 Z M 10.546875 3.074219">
+      </svg>
+    </a>
+
+    <section class="about">
+
+      <div class="container">
+        <div class="about__inner">
+
+          <h2 class="about__title title">The Basics Of Healthy Food<span>about</span></h2>
+          <div class="about__text">
+            <p>
+              In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur
+              voluptate
+              est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
+            </p>
           </div>
+          <div class="about__slider">
 
+            <ul class="about__list">
 
-          <address class="page-top__address">
-            <ul class="page-top__contacts contacts">
-
-              <li class="contacts__item">
-                <a href="#" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--clock">
-                      <use xlink:href="images/sprite.svg#clock"></use>
-                    </svg>
-                  </span>
-                  <time class="contacts__time" datetime="10:00-19:00">
-                    Everyday 10:00 am - 7:00 pm
-                  </time>
-                  <span class="contacts__span">Working hours</span>
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/1.jpg" alt="food">
                 </a>
               </li>
 
-              <li class="contacts__item">
-                <a href="#" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--nav">
-                      <use xlink:href="images/sprite.svg#nav"></use>
-                    </svg>
-                  </span>
-                  <span class="contacts__address">
-                    Sumy street 15, Kharkiv
-                  </span>
-                  <span class="contacts__span">Get Directions</span>
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/2.jpg" alt="food">
                 </a>
               </li>
 
-              <li class="contacts__item">
-                <a href="#tel:+380638332415" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--tel">
-                      <use xlink:href="images/sprite.svg#call"></use>
-                    </svg>
-
-                  </span>
-                  <span>
-                    +38 (063)833 24 15
-                  </span>
-                  <span class="contacts__span">Call Online</span>
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/3.jpg" alt="food">
                 </a>
               </li>
 
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/4.jpg" alt="food">
+                </a>
+              </li>
+
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/5.jpg" alt="food">
+                </a>
+              </li>
+
+              <li class="about__item">
+                <a href="#">
+                  <img class="about__img" src="images/about/6.jpg" alt="food">
+                </a>
+              </li>
             </ul>
-          </address>
 
-        </div>
-
-      </section>
-
-      <section class="about">
-        <div class="container">
-          <div class="about__inner">
-
-            <h2 class="about__title title">The Basics Of Healthy Food<span>about</span></h2>
-            <div class="about__text">
-              <p>
-                In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur
-                voluptate
-                est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
-              </p>
-            </div>
-            <div class="about__slider">
-
-              <ul class="about__list">
-                <li class="about__item">
-                  <img class="about__img" src="images/about/1.jpg" alt="food">
-                </li>
-                <li class="about__item">
-                  <img class="about__img" src="images/about/2.jpg" alt="food">
-                </li>
-                <li class="about__item">
-                  <img class="about__img" src="images/about/1.jpg" alt="food">
-                </li>
-                <li class="about__item">
-                  <img class="about__img" src="images/about/2.jpg" alt="food">
-                </li>
-                <li class="about__item">
-                  <img class="about__img" src="images/about/1.jpg" alt="food">
-                </li>
-                <li class="about__item">
-                  <img class="about__img" src="images/about/2.jpg" alt="food">
-                </li>
-              </ul>
-
-            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="work">
-        <div class="container">
-          <h2 class="work__title title">how it works<span>work</span></h2>
 
-          <ul class="work__list">
-            <li class="work__item">
-              <a class="work__link" href="#">
-                <h3 class="work__name">Pick meals</h3>
-                <div class="work__text">
+
+    <section class="work">
+      <div class="container">
+        <h2 class="work__title title">how it works<span>work</span></h2>
+
+        <ul class="work__list">
+          <li class="work__item">
+            <a class="work__link" href="#">
+              <h3 class="work__name">Pick meals</h3>
+              <div class="work__text">
+                <p>
+                  Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie
+                  options.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="work__item">
+            <a class="work__link" href="#">
+              <h3 class="work__name">Choose how often</h3>
+              <div class="work__text">
+                <p>
+                  Our team of chefs do the prep work - no more chopping, measuring, or sink full of dishes!
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="work__item">
+            <a class="work__link" href="#">
+              <h3 class="work__name">fast deliveries</h3>
+              <div class="work__text">
+                <p>
+                  Your freshly prepped 15-min dinner kits arrive on your doorstep in a refrigerated box.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="work__item">
+            <a class="work__link" href="#">
+              <h3 class="work__name">tasty meals</h3>
+              <div class="work__text">
+                <p>
+                  Gobble makes cooking fast, so you have more time to unwind and be with family.
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <section class="dishes" id="dishes">
+      <div class="container">
+        <h2 class="dishes__title title">dish of the day<span>dishes</span></h2>
+
+        <ul class="dishes__inner">
+
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/1.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
+              </a>
+              <div class="dishes-card__content">
+                <a class="dishes-card__link" href="#">
+                  <h3 class="dishes-card__name">Featured Meal</h3>
+                </a>
+                <span class="dishes-card__descr">Served with french fries + drink</span>
+                <div class="dishes-card__text">
                   <p>
-                    Choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie
-                    options.
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty
+                    and
+                    more...
                   </p>
                 </div>
+                <div class="dishes-card__bottom">
+                  <div class="star" data-rateyo-rating="3"></div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/2.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
               </a>
-            </li>
-            <li class="work__item">
-              <a class="work__link" href="#">
-                <h3 class="work__name">Choose how often</h3>
-                <div class="work__text">
+              <div class="dishes-card__content">
+                <a class="dishes-card__link" href="#">
+                  <h3 class="dishes-card__name">Featured Meal</h3>
+                </a>
+                <span class="dishes-card__descr">Served with french fries + drink</span>
+                <div class="dishes-card__text">
                   <p>
-                    Our team of chefs do the prep work - no more chopping, measuring, or sink full of dishes!
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
+                    patty and
+                    more...
                   </p>
                 </div>
+                <div class="dishes-card__bottom">
+                  <div class="star" data-rateyo-rating="3"></div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/3.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
               </a>
-            </li>
-            <li class="work__item">
-              <a class="work__link" href="#">
-                <h3 class="work__name">fast deliveries</h3>
-                <div class="work__text">
+              <div class="dishes-card__content">
+                <a class="dishes-card__link" href="#">
+                  <h3 class="dishes-card__name">Featured Meal</h3>
+                </a>
+                <span class="dishes-card__descr">Served with french fries + drink</span>
+                <div class="dishes-card__text">
                   <p>
-                    Your freshly prepped 15-min dinner kits arrive on your doorstep in a refrigerated box.
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender
+                    crisp patty and
+                    more...
                   </p>
                 </div>
+                <div class="dishes-card__bottom">
+                  <div class="star" data-rateyo-rating='5'>
+                  </div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/4.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
               </a>
-            </li>
-            <li class="work__item">
-              <a class="work__link" href="#">
-                <h3 class="work__name">tasty meals</h3>
-                <div class="work__text">
+              <div class="dishes-card__content">
+                <a class="dishes-card__link" href="#">
+                  <h3 class="dishes-card__name">Featured Meal</h3>
+                </a>
+                <span class="dishes-card__descr">Served with french fries + drink</span>
+                <div class="dishes-card__text">
                   <p>
-                    Gobble makes cooking fast, so you have more time to unwind and be with family.
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add
+                    Tender crisp patty and
+                    more...
                   </p>
                 </div>
+                <div class="dishes-card__bottom">
+                  <div class="star" data-rateyo-rating='5'>
+                  </div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/5.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
               </a>
-            </li>
-          </ul>
-
-        </div>
-      </section>
-
-      <section class="dishes">
-        <div class="container">
-          <h2 class="dishes__title title">dish of the day<span>dishes</span></h2>
-
-          <ul class="dishes__inner">
-
-            <li>
-              <article class="dishes-card">
+              <div class="dishes-card__content">
                 <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/1.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
-                    </svg>
-                  </span>
+                  <h3 class="dishes-card__name">Featured Meal</h3>
                 </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
-                  </a>
-                  <span class="dishes-card__descr">Served with french fries + drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty
-                      and
-                      more...
-                    </p>
-                  </div>
-                  <div class="dishes-card__bottom">
-                    <div class="star" data-rateyo-rating="3"></div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
+                <span class="dishes-card__descr">Served with french fries + drink</span>
+                <div class="dishes-card__text">
+                  <p>
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper
+                    patty, Add Tender crisp patty and
+                    more...
+                  </p>
                 </div>
-              </article>
-            </li>
-            <li>
-              <article class="dishes-card">
+                <div class="dishes-card__bottom">
+                  <div class="star" data-rateyo-rating='4'>
+                  </div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="dishes-card">
+              <a class="dishes-card__link" href="#">
+                <img src="images/dishes/6.jpg" alt="dishes" class="dishes-card__img">
+                <span class="dishes-card__icon">
+                  <svg class="icon icon--curved-arrow">
+                    <use xlink:href="images/sprite.svg#curved"></use>
+                  </svg>
+                </span>
+              </a>
+              <div class="dishes-card__content">
                 <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/2.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
-                    </svg>
-                  </span>
+                  <h3 class="dishes-card__name">Featured Meal</h3>
                 </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
-                  </a>
-                  <span class="dishes-card__descr">Served with french fries + drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp
-                      patty and
-                      more...
-                    </p>
-                  </div>
-                  <div class="dishes-card__bottom">
-                    <div class="star" data-rateyo-rating="3"></div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
+                <span class="dishes-card__descr">Served with french fries +
+                  drink</span>
+                <div class="dishes-card__text">
+                  <p>
+                    Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add
+                    whopper patty, Add Tender crisp patty and
+                    more...
+                  </p>
                 </div>
-              </article>
-            </li>
+                <div class="dishes-card__bottom">
+                  <div class="dishes-card__star star" data-rateyo-rating='4'>
+                  </div>
+                  <span>12</span>
+                  <button class="dishes-card__btn btn" type="button">
+                    Order
+                  </button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
 
-            <li>
-              <article class="dishes-card">
-                <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/3.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
-                    </svg>
-                  </span>
+      </div>
+    </section>
+
+
+    <section class="chefs" id="chefs">
+      <div class="container">
+        <h2 class="chefs__title title">This month's chefs<span>chefs</span></h2>
+
+        <ul class="chefs__inner">
+          <li>
+            <article class="chef-card">
+              <div class="chef-card__top">
+                <a class="chef-card__link" href="#">
+                  <img class="chef-card__avatar" src="images/avatar/1.jpg" alt="chef photo">
                 </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
+                <div class="chef-card__content">
+                  <a href="#">
+                    <h3 class="chef-card__name">Gregory Flores</h3>
                   </a>
-                  <span class="dishes-card__descr">Served with french fries + drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender
-                      crisp patty and
-                      more...
-                    </p>
-                  </div>
-                  <div class="dishes-card__bottom">
-                    <div class="star" data-rateyo-rating='5'>
-                    </div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
+                  <span class="chef-card__position">Chef of the cold</span>
                 </div>
-              </article>
-            </li>
-            <li>
-              <article class="dishes-card">
-                <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/4.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
-                    </svg>
-                  </span>
+              </div>
+              <div class="chef-card__bottom">
+                <ul class="chef-card__works">
+
+                  <li class="chef-card__item js__zoom-big js__zoom-big--1">
+                    <img class="chef-card__img chef-card__img--big" src="images/chef-works/1.jpg" alt="work">
+                  </li>
+
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--1">
+                    <img class="chef-card__img" src="images/chef-works/2.jpg" alt="work">
+                  </li>
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--2">
+                    <img class="chef-card__img" src="images/chef-works/3.jpg" alt="work">
+                  </li>
+
+                </ul>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="chef-card">
+              <div class="chef-card__top">
+                <a class="chef-card__link" href="#">
+                  <img class="chef-card__avatar" src="images/avatar/2.jpg" alt="chef photo">
                 </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
+                <div class="chef-card__content">
+                  <a href="#">
+                    <h3 class="chef-card__name">Gregory Flores</h3>
                   </a>
-                  <span class="dishes-card__descr">Served with french fries + drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add
-                      Tender crisp patty and
-                      more...
-                    </p>
-                  </div>
-                  <div class="dishes-card__bottom">
-                    <div class="star" data-rateyo-rating='5'>
-                    </div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
+                  <span class="chef-card__position">Chef of the cold</span>
                 </div>
-              </article>
-            </li>
-            <li>
-              <article class="dishes-card">
-                <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/5.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
-                    </svg>
-                  </span>
+              </div>
+              <div class="chef-card__bottom">
+                <ul class="chef-card__works">
+
+                  <li class="chef-card__item js__zoom-big js__zoom-big--2">
+                    <img class="chef-card__img chef-card__img--big" src="images/chef-works/4.jpg" alt="work">
+                  </li>
+
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--3">
+                    <img class="chef-card__img" src="images/chef-works/5.jpg" alt="work">
+                  </li>
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--4">
+                    <img class="chef-card__img" src="images/chef-works/6.jpg" alt="work">
+                  </li>
+
+                </ul>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="chef-card">
+              <div class="chef-card__top">
+                <a class="chef-card__link" href="#">
+                  <img class="chef-card__avatar" src="images/avatar/3.jpg" alt="chef photo">
                 </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
+                <div class="chef-card__content">
+                  <a href="#">
+                    <h3 class="chef-card__name">Gregory Flores</h3>
                   </a>
-                  <span class="dishes-card__descr">Served with french fries + drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper
-                      patty, Add Tender crisp patty and
-                      more...
-                    </p>
-                  </div>
-                  <div class="dishes-card__bottom">
-                    <div class="star" data-rateyo-rating='4'>
-                    </div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
+                  <span class="chef-card__position">Chef of the cold</span>
                 </div>
-              </article>
-            </li>
+              </div>
+              <div class="chef-card__bottom">
+                <ul class="chef-card__works">
 
-            <li>
-              <article class="dishes-card">
-                <a class="dishes-card__link" href="#">
-                  <img src="images/dishes/6.jpg" alt="dishes" class="dishes-card__img">
-                  <span class="dishes-card__icon">
-                    <svg class="icon icon--curved-arrow">
-                      <use xlink:href="images/sprite.svg#curved"></use>
+                  <li class="chef-card__item js__zoom-big js__zoom-big--3">
+                    <img class="chef-card__img chef-card__img--big" src="images/chef-works/1.jpg" alt="work">
+                  </li>
+
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--5">
+                    <img class="chef-card__img" src="images/chef-works/2.jpg" alt="work">
+                  </li>
+
+                  <li class="chef-card__item js__zoom-small js__zoom-small--6">
+                    <img class="chef-card__img" src="images/chef-works/3.jpg" alt="work">
+                  </li>
+
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <section class="recipes" id="recipes">
+      <div class="container">
+        <h2 class="recipes__title title">Recipes From Our Chefs<span>Recipes</span></h2>
+
+        <ul class="recipes__inner">
+
+          <li class="recipes__item">
+            <article class="recipes-card" style="background-image: url('images/recipes-card-bg.jpg');">
+
+              <a class="recipes-card__link" href="#">
+
+                <span class="recipes-card__icon">
+                  <svg class="icon icon--arrow">
+                    <use xlink:href="images/sprite.svg#slide-arrow"></use>
+                  </svg>
+                </span>
+                <h3 class="recipes-card__title">
+                  breakfast
+                </h3>
+                <time class="recipes-card__time" datetime="2016-07-05">
+                  05 Jul 2016
+                </time>
+                <div class="recipes-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  </p>
+                </div>
+                <span class="recipes-card__author">Jason Keller</span>
+                <div class="recipes-card__bottom">
+                  <div class="recipes-card__view">
+                    <svg class="icon icon--view">
+                      <use xlink:href="images/sprite.svg#view"></use>
                     </svg>
-                  </span>
-                </a>
-                <div class="dishes-card__content">
-                  <a class="dishes-card__link" href="#">
-                    <h3 class="dishes-card__name">Featured Meal</h3>
-                  </a>
-                  <span class="dishes-card__descr">Served with french fries +
-                    drink</span>
-                  <div class="dishes-card__text">
-                    <p>
-                      Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add
-                      whopper patty, Add Tender crisp patty and
-                      more...
-                    </p>
+
+                    <span class="recipes-card__numbers">
+                      275
+                    </span>
                   </div>
-                  <div class="dishes-card__bottom">
-                    <div class="dishes-card__star star" data-rateyo-rating='4'>
-                    </div>
-                    <span>12</span>
-                    <button class="dishes-card__btn btn" type="button">
-                      Order
-                    </button>
-                  </div>
-                </div>
-              </article>
-            </li>
-          </ul>
-
-        </div>
-      </section>
-
-      <section class="chefs">
-        <div class="container">
-          <h2 class="chefs__title title">This month's chefs<span>chefs</span></h2>
-
-          <ul class="chefs__inner">
-            <li>
-              <article class="chef-card">
-                <div class="chef-card__top">
-                  <a class="chef-card__link" href="#">
-                    <img class="chef-card__avatar" src="images/avatar/1.jpg" alt="chef photo">
-                  </a>
-                  <div class="chef-card__content">
-                    <a href="#">
-                      <h3 class="chef-card__name">Gregory Flores</h3>
-                    </a>
-                    <span class="chef-card__position">Chef of the cold</span>
-                  </div>
-                </div>
-                <div class="chef-card__bottom">
-                  <ul class="chef-card__works">
-                    <li class="chef-card__item" id="img-container">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--big" src="images/chef-works/1.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/2.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/3.jpg" alt="work">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article class="chef-card">
-                <div class="chef-card__top">
-                  <a class="chef-card__link" href="#">
-                    <img class="chef-card__avatar" src="images/avatar/2.jpg" alt="chef photo">
-                  </a>
-                  <div class="chef-card__content">
-                    <a href="#">
-                      <h3 class="chef-card__name">Annette Cooper</h3>
-                    </a>
-                    <span class="chef-card__position">Chef of the hot</span>
-                  </div>
-                </div>
-                <div class="chef-card__bottom">
-                  <ul class="chef-card__works">
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--big" src="images/chef-works/4.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/5.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/6.jpg" alt="work">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article class="chef-card">
-                <div class="chef-card__top">
-                  <a class="chef-card__link" href="#">
-                    <img class="chef-card__avatar" src="images/avatar/3.jpg" alt="chef photo">
-                  </a>
-                  <div class="chef-card__content">
-                    <a href="#">
-                      <h3 class="chef-card__name">Greg Fox</h3>
-                    </a>
-                    <span class="chef-card__position">Сhef macro kitchen</span>
-                  </div>
-                </div>
-                <div class="chef-card__bottom">
-                  <ul class="chef-card__works">
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--big" src="images/chef-works/7.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/8.jpg" alt="work">
-                      </a>
-                    </li>
-                    <li class="chef-card__item">
-                      <a class="chef-card__link" href="#">
-                        <img class="chef-card__img chef-card__img--small" src="images/chef-works/9.jpg" alt="work">
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-          </ul>
-
-        </div>
-      </section>
-
-      <section class="recipes">
-        <div class="container">
-          <h2 class="recipes__title title">Recipes From Our Chefs<span>Recipes</span></h2>
-
-          <ul class="recipes__inner">
-
-            <li class="recipes__item">
-              <article class="recipes-card" style="background-image: url('images/recipes-card-bg.jpg');">
-
-                <a class="recipes-card__link" href="#">
-
-                  <span class="recipes-card__icon">
-                    <svg class="icon icon--arrow">
-                      <use xlink:href="images/sprite.svg#slide-arrow"></use>
+                  <div class="recipes-card__comments">
+                    <svg class="icon icon--chat">
+                      <use xlink:href="images/sprite.svg#chat"></use>
                     </svg>
-                  </span>
-                  <h3 class="recipes-card__title">
-                    breakfast
-                  </h3>
-                  <time class="recipes-card__time" datetime="2016-07-05">
-                    05 Jul 2016
-                  </time>
-                  <div class="recipes-card__text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </p>
+                    <span class="recipes-card__numbers">
+                      12
+                    </span>
                   </div>
-                  <span class="recipes-card__author">Jason Keller</span>
-                  <div class="recipes-card__bottom">
+                </div>
+              </a>
+
+            </article>
+          </li>
+
+          <li class="recipes__item">
+            <article class="recipes-card recipes-card--grey">
+              <a class="recipes-card__link" href="#">
+                <div class="recipes-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  </p>
+                </div>
+                <div class="recipes-card__bottom">
+                  <div class="recipes-card__left">
+                    <h3 class="recipes-card__title">
+                      breakfast
+                    </h3>
+                    <time class="recipes-card__time" datetime="2016-07-05">
+                      05 Jul 2016
+                    </time>
+                  </div>
+                  <div class="recipes-card__right">
                     <div class="recipes-card__view">
                       <svg class="icon icon--view">
                         <use xlink:href="images/sprite.svg#view"></use>
@@ -588,399 +688,354 @@
                       <svg class="icon icon--chat">
                         <use xlink:href="images/sprite.svg#chat"></use>
                       </svg>
+
                       <span class="recipes-card__numbers">
                         12
                       </span>
                     </div>
                   </div>
-                </a>
 
-              </article>
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="recipes__item">
+            <article class="recipes-card recipes-card--grey recipes-card--image"
+              style="background-image: url('images/recipes-card-bg-2.jpg');">
+              <a class="recipes-card__link" href="#">
+                <div class="recipes-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  </p>
+                </div>
+
+                <div class="recipes-card__bottom">
+
+                  <div class="recipes-card__left">
+                    <h3 class="recipes-card__title">
+                      breakfast
+                    </h3>
+
+                    <time class="recipes-card__time" datetime="2016-07-05">
+                      05 Jul 2016
+                    </time>
+                  </div>
+
+                  <div class="recipes-card__right">
+                    <div class="recipes-card__view">
+                      <svg class="icon icon--view">
+                        <use xlink:href="images/sprite.svg#view"></use>
+                      </svg>
+
+                      <span class="recipes-card__numbers">
+                        275
+                      </span>
+
+                    </div>
+                    <div class="recipes-card__comments">
+                      <svg class="icon icon--chat">
+                        <use xlink:href="images/sprite.svg#chat"></use>
+                      </svg>
+
+                      <span class="recipes-card__numbers">
+                        12
+                      </span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </a>
+            </article>
+          </li>
+
+          <li class="recipes__item">
+            <article class="recipes-card recipes-card--grey">
+              <a class="recipes-card__link" href="#">
+                <div class="recipes-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  </p>
+                </div>
+
+                <div class="recipes-card__bottom">
+
+                  <div class="recipes-card__left">
+                    <h3 class="recipes-card__title">
+                      breakfast
+                    </h3>
+
+                    <time class="recipes-card__time" datetime="2016-07-05">
+                      05 Jul 2016
+                    </time>
+                  </div>
+
+                  <div class="recipes-card__right">
+                    <div class="recipes-card__view">
+                      <svg class="icon icon--view">
+                        <use xlink:href="images/sprite.svg#view"></use>
+                      </svg>
+
+                      <span class="recipes-card__numbers">
+                        275
+                      </span>
+
+                    </div>
+                    <div class="recipes-card__comments">
+                      <svg class="icon icon--chat">
+                        <use xlink:href="images/sprite.svg#chat"></use>
+                      </svg>
+
+                      <span class="recipes-card__numbers">
+                        12
+                      </span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </a>
+            </article>
+          </li>
+
+        </ul>
+    </section>
+
+    <section class="social" id="social">
+      <div class="container">
+        <h2 class="social__title title">We are in Social<span>Social</span></h2>
+
+        <ul class="social__inner">
+          <li>
+            <article class="social-card">
+              <div class="social-card__top">
+
+                <a href="#" class="social-card__link">
+                  <span class="social-card__icon">
+                    <svg class="icon icon--tw">
+                      <use xlink:href="images/sprite.svg#tw"></use>
+                    </svg>
+                  </span>
+                  <h3 class="social-card__title">Twitter</h3>
+                </a>
+                <a href="#" class="social-card__btn btn">
+                  follow us
+                </a>
+              </div>
+
+              <div class="social-card__bottom" data-simplebar>
+                <time class="social-card__time" datetime="2016-07-24" datetime="2016-07-24 16:20">
+                  24 Jun at 16:20 pm
+                </time>
+
+                <div class="social-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    Lorem
+                    ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit.
+                    Dicta nisi eaque quis dolor ducimus amet ullam magnam nobis autem unde inventore, libero
+                    voluptas
+                    tenetur ad iure laboriosam, velit porro sit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, impedit in mollitia pariatur,
+                    voluptas unde natus repellat quae inventore deleniti aliquid harum! Eum nostrum dicta ab
+                    veritatis repellendus esse corrupti.
+                  </p>
+                </div>
+
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="social-card social-card--gallery">
+              <div class="social-card__top">
+                <a href="#" class="social-card__link">
+                  <span class="social-card__icon">
+                    <svg class="icon icon--insta">
+                      <use xlink:href="images/sprite.svg#inst"></use>
+                    </svg>
+                  </span>
+                  <h3 class="social-card__title">Instagram</h3>
+                </a>
+                <a href="#" class="social-card__btn btn">
+                  follow us
+                </a>
+              </div>
+
+
+              <div class="social-card__bottom social-card__bottom--gallery" data-simplebar>
+                <a href="#" class="social-card__gallery-link">
+
+                  <span class="social-card__icon">
+                    <svg class="icon icon--arrow">
+                      <use xlink:href="images/sprite.svg#left"></use>
+                    </svg>
+                  </span>
+
+
+
+                  <ul class="social-card__list">
+                    <li class="social-card__item">
+                      <img src="images/social-card/1.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/2.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/3.jpg" alt="" class="social-card__img">
+                    </li>
+
+                    <li class="social-card__item">
+                      <img src="images/social-card/4.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/5.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/6.jpg" alt="" class="social-card__img">
+                    </li>
+
+                    <li class="social-card__item">
+                      <img src="images/social-card/1.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/2.jpg" alt="" class="social-card__img">
+                    </li>
+                    <li class="social-card__item">
+                      <img src="images/social-card/3.jpg" alt="" class="social-card__img">
+                    </li>
+
+                  </ul>
+
+                </a>
+              </div>
+
+            </article>
+          </li>
+
+          <li>
+            <article class="social-card">
+              <div class="social-card__top">
+                <a href="#" class="social-card__link">
+                  <span class="social-card__icon">
+                    <svg class="icon icon--fb">
+                      <use xlink:href="images/sprite.svg#fb"></use>
+                    </svg>
+                  </span>
+
+                  <h3 class="social-card__title">Facebook</h3>
+                </a>
+                <a href="#" class="social-card__btn btn">
+                  follow us
+                </a>
+              </div>
+
+              <div class="social-card__bottom" data-simplebar>
+
+                <time class="social-card__time" datetime="2016-07-24" datetime="2016-07-24 16:20">
+                  24 Jun at 16:20 pm
+                </time>
+
+                <div class="social-card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    Lorem
+                    ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    Lorem
+                    ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    Lorem
+                    ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                  </p>
+                </div>
+
+              </div>
+            </article>
+          </li>
+
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container">
+
+        <address class="footer__address">
+          <ul class="footer__contacts contacts">
+
+            <li class="contacts__item">
+              <a href="#" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--clock" viewBox="0 0 20 20">
+                    <path
+                      d="M 10 0 C 4.484375 0 0 4.484375 0 10 C 0 15.515625 4.484375 20 10 20 C 15.515625 20 20 15.515625 20 10 C 20 4.484375 15.515625 0 10 0 Z M 10 18.75 C 5.175781 18.75 1.25 14.824219 1.25 10 C 1.25 5.175781 5.175781 1.25 10 1.25 C 14.824219 1.25 18.75 5.175781 18.75 10 C 18.75 14.824219 14.824219 18.75 10 18.75 Z M 10 18.75 " />
+                    <path
+                      d="M 10.625 3.75 L 9.375 3.75 L 9.375 10.257812 L 13.308594 14.191406 L 14.191406 13.308594 L 10.625 9.742188 Z M 10.625 3.75 " />
+                  </svg>
+                </span>
+                <time class="contacts__time" datetime="10:00-19:00">
+                  Everyday 10:00 am - 7:00 pm
+                </time>
+                <span class="contacts__span">Working hours</span>
+              </a>
             </li>
 
-            <li class="recipes__item">
-              <article class="recipes-card recipes-card--grey">
-                <a class="recipes-card__link" href="#">
-                  <div class="recipes-card__text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    </p>
-                  </div>
-                  <div class="recipes-card__bottom">
-                    <div class="recipes-card__left">
-                      <h3 class="recipes-card__title">
-                        breakfast
-                      </h3>
-                      <time class="recipes-card__time" datetime="2016-07-05">
-                        05 Jul 2016
-                      </time>
-                    </div>
-                    <div class="recipes-card__right">
-                      <div class="recipes-card__view">
-                        <svg class="icon icon--view">
-                          <use xlink:href="images/sprite.svg#view"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          275
-                        </span>
-                      </div>
-                      <div class="recipes-card__comments">
-                        <svg class="icon icon--chat">
-                          <use xlink:href="images/sprite.svg#chat"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          12
-                        </span>
-                      </div>
-                    </div>
-
-                  </div>
-                </a>
-              </article>
+            <li class="contacts__item">
+              <a href="#" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--nav" viewBox="0 0 18 18">
+                    <path
+                      d="M 17.644531 0.0664062 C 17.464844 -0.0234375 17.25 -0.0234375 17.070312 0.0664062 L 0.355469 8.425781 C 0.0390625 8.582031 -0.0898438 8.96875 0.0664062 9.289062 C 0.160156 9.46875 0.328125 9.597656 0.527344 9.632812 L 7.160156 10.839844 L 8.367188 17.472656 C 8.417969 17.742188 8.632812 17.953125 8.90625 17.992188 C 8.9375 17.996094 8.96875 18 9 18 C 9.242188 18 9.464844 17.863281 9.574219 17.644531 L 17.933594 0.929688 C 18.089844 0.613281 17.960938 0.226562 17.644531 0.0664062 Z M 17.644531 0.0664062 " />
+                  </svg>
+                </span>
+                <span class="contacts__address">
+                  Sumy street 15, Kharkiv
+                </span>
+                <span class="contacts__span">Get Directions</span>
+              </a>
             </li>
 
-            <li class="recipes__item">
-              <article class="recipes-card recipes-card--grey recipes-card--image"
-                style="background-image: url('images/recipes-card-bg-2.jpg');">
-                <a class="recipes-card__link" href="#">
-                  <div class="recipes-card__text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    </p>
-                  </div>
-
-                  <div class="recipes-card__bottom">
-
-                    <div class="recipes-card__left">
-                      <h3 class="recipes-card__title">
-                        breakfast
-                      </h3>
-
-                      <time class="recipes-card__time" datetime="2016-07-05">
-                        05 Jul 2016
-                      </time>
-                    </div>
-
-                    <div class="recipes-card__right">
-                      <div class="recipes-card__view">
-                        <svg class="icon icon--view">
-                          <use xlink:href="images/sprite.svg#view"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          275
-                        </span>
-
-                      </div>
-                      <div class="recipes-card__comments">
-                        <svg class="icon icon--chat">
-                          <use xlink:href="images/sprite.svg#chat"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          12
-                        </span>
-
-                      </div>
-                    </div>
-
-                  </div>
-                </a>
-              </article>
-            </li>
-
-            <li class="recipes__item">
-              <article class="recipes-card recipes-card--grey">
-                <a class="recipes-card__link" href="#">
-                  <div class="recipes-card__text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    </p>
-                  </div>
-
-                  <div class="recipes-card__bottom">
-
-                    <div class="recipes-card__left">
-                      <h3 class="recipes-card__title">
-                        breakfast
-                      </h3>
-
-                      <time class="recipes-card__time" datetime="2016-07-05">
-                        05 Jul 2016
-                      </time>
-                    </div>
-
-                    <div class="recipes-card__right">
-                      <div class="recipes-card__view">
-                        <svg class="icon icon--view">
-                          <use xlink:href="images/sprite.svg#view"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          275
-                        </span>
-
-                      </div>
-                      <div class="recipes-card__comments">
-                        <svg class="icon icon--chat">
-                          <use xlink:href="images/sprite.svg#chat"></use>
-                        </svg>
-
-                        <span class="recipes-card__numbers">
-                          12
-                        </span>
-
-                      </div>
-                    </div>
-
-                  </div>
-                </a>
-              </article>
+            <li class="contacts__item">
+              <a href="#tel:+380638332415" class="contacts__link">
+                <span class="contacts__icon">
+                  <svg class="icon icon--tel" viewBox="0 0 18 18">
+                    <path
+                      d="M 16.554688 11.816406 C 15.453125 11.816406 14.371094 11.644531 13.347656 11.304688 C 12.84375 11.132812 12.226562 11.289062 11.917969 11.605469 L 9.894531 13.132812 C 7.546875 11.878906 6.101562 10.433594 4.867188 8.105469 L 6.347656 6.132812 C 6.734375 5.75 6.875 5.1875 6.707031 4.660156 C 6.367188 3.628906 6.195312 2.546875 6.195312 1.445312 C 6.195312 0.648438 5.546875 0 4.75 0 L 1.445312 0 C 0.648438 0 0 0.648438 0 1.445312 C 0 10.574219 7.425781 18 16.554688 18 C 17.351562 18 18 17.351562 18 16.554688 L 18 13.257812 C 18 12.460938 17.351562 11.816406 16.554688 11.816406 Z M 16.554688 11.816406 " />
+                  </svg>
+                </span>
+                <span>
+                  +38 (063)833 24 15
+                </span>
+                <span class="contacts__span">Call Online</span>
+              </a>
             </li>
 
           </ul>
-      </section>
+        </address>
 
-      <section class="social">
-        <div class="container">
-          <h2 class="social__title title">We in Social<span>Social</span></h2>
-
-          <ul class="social__inner">
-            <li>
-              <article class="social-card">
-                <div class="social-card__top">
-
-                  <a href="#" class="social-card__link">
-                    <span class="social-card__icon">
-                      <svg class="icon icon--tw">
-                        <use xlink:href="images/sprite.svg#tw"></use>
-                      </svg>
-                    </span>
-                    <span>Twitter</span>
-                  </a>
-                  <a href="#" class="social-card__btn btn">
-                    follow us
-                  </a>
-                </div>
-
-                <div class="social-card__bottom">
-                  <time class="social-card__time" datetime="2016-07-24" datetime="2016-07-24 16:20">
-                    24 Jun at 16:20 pm
-                  </time>
-                  <div class="scroll-container scroll-container--small">
-                    <div class="social-card__text">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        Lorem
-                        ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit.
-                        Dicta nisi eaque quis dolor ducimus amet ullam magnam nobis autem unde inventore, libero
-                        voluptas
-                        tenetur ad iure laboriosam, velit porro sit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, impedit in mollitia pariatur,
-                        voluptas unde natus repellat quae inventore deleniti aliquid harum! Eum nostrum dicta ab
-                        veritatis repellendus esse corrupti.
-                      </p>
-                    </div>
-                  </div>
-                  <a class="social-card__link" href="#">
-                    @DennisFerguson
-                  </a>
-                </div>
-              </article>
-            </li>
-
-            <li>
-              <article class="social-card social-card--middle">
-
-                <div class="social-card__top">
-                  <a href="#" class="social-card__link">
-                    <span class="social-card__icon">
-                      <svg class="icon icon--insta">
-                        <use xlink:href="images/sprite.svg#inst"></use>
-                      </svg>
-
-                    </span>
-                    <span>Instagram</span>
-                  </a>
-                  <a href="#" class="social-card__btn btn">
-                    follow us
-                  </a>
-                </div>
-
-                <div class="social-card__bottom">
-                  <a href="#" class="social-card__link">
-                    <!-- <span class="social-card__icon">
-                       <svg class="icon icon--arrow">
-                         <use xlink:href="images/sprite.svg#left"></use>
-                       </svg>
-                    </span> -->
-
-                    <ul class="social-card__list">
-                     
-                        <li class="social-card__item">
-                          <img src="images/social-card/1.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/2.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/3.jpg" alt="" class="social-card__img">
-                        </li>
-
-                        <li class="social-card__item">
-                          <img src="images/social-card/4.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/5.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/6.jpg" alt="" class="social-card__img">
-                        </li>
-
-                        <li class="social-card__item">
-                          <img src="images/social-card/1.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/2.jpg" alt="" class="social-card__img">
-                        </li>
-                        <li class="social-card__item">
-                          <img src="images/social-card/3.jpg" alt="" class="social-card__img">
-                        </li>
-                    
-                    </ul>
-
-                  </a>
-                </div>
-
-              </article>
-            </li>
-
-            <li>
-              <article class="social-card">
-                <div class="social-card__top">
-                  <a href="#" class="social-card__link">
-                    <span class="social-card__icon">
-                      <svg class="icon icon--fb">
-                        <use xlink:href="images/sprite.svg#fb"></use>
-                      </svg>
-                    </span>
-
-                    <span>Facebook</span>
-                  </a>
-                  <a href="#" class="social-card__btn btn">
-                    follow us
-                  </a>
-                </div>
-
-                <div class="social-card__bottom">
-
-                  <time class="social-card__time" datetime="2016-07-24" datetime="2016-07-24 16:20">
-                    24 Jun at 16:20 pm
-                  </time>
-                  <div class="scroll-container">
-                    <div class="social-card__text social-card__text--full">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        Lorem
-                        ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        Lorem
-                        ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        Lorem
-                        ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur
-                        adipiscing
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>
-
-
-          </ul>
-        </div>
-      </section>
-
-
-    </main>
-
-    <footer class="footer">
-      <div class="footer__top">
-        <div class="container">
-
-          <address class="footer__address">
-            <ul class="footer__contacts contacts">
-
-              <li class="contacts__item">
-                <a href="#" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--clock" viewBox="0 0 20 20">
-                      <path
-                        d="M 10 0 C 4.484375 0 0 4.484375 0 10 C 0 15.515625 4.484375 20 10 20 C 15.515625 20 20 15.515625 20 10 C 20 4.484375 15.515625 0 10 0 Z M 10 18.75 C 5.175781 18.75 1.25 14.824219 1.25 10 C 1.25 5.175781 5.175781 1.25 10 1.25 C 14.824219 1.25 18.75 5.175781 18.75 10 C 18.75 14.824219 14.824219 18.75 10 18.75 Z M 10 18.75 " />
-                      <path
-                        d="M 10.625 3.75 L 9.375 3.75 L 9.375 10.257812 L 13.308594 14.191406 L 14.191406 13.308594 L 10.625 9.742188 Z M 10.625 3.75 " />
-                    </svg>
-                  </span>
-                  <time class="contacts__time" datetime="10:00-19:00">
-                    Everyday 10:00 am - 7:00 pm
-                  </time>
-                  <span class="contacts__span">Working hours</span>
-                </a>
-              </li>
-
-              <li class="contacts__item">
-                <a href="#" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--nav" viewBox="0 0 18 18">
-                      <path
-                        d="M 17.644531 0.0664062 C 17.464844 -0.0234375 17.25 -0.0234375 17.070312 0.0664062 L 0.355469 8.425781 C 0.0390625 8.582031 -0.0898438 8.96875 0.0664062 9.289062 C 0.160156 9.46875 0.328125 9.597656 0.527344 9.632812 L 7.160156 10.839844 L 8.367188 17.472656 C 8.417969 17.742188 8.632812 17.953125 8.90625 17.992188 C 8.9375 17.996094 8.96875 18 9 18 C 9.242188 18 9.464844 17.863281 9.574219 17.644531 L 17.933594 0.929688 C 18.089844 0.613281 17.960938 0.226562 17.644531 0.0664062 Z M 17.644531 0.0664062 " />
-                    </svg>
-                  </span>
-                  <span class="contacts__address">
-                    Sumy street 15, Kharkiv
-                  </span>
-                  <span class="contacts__span">Get Directions</span>
-                </a>
-              </li>
-
-              <li class="contacts__item">
-                <a href="#tel:+380638332415" class="contacts__link">
-                  <span class="contacts__icon">
-                    <svg class="icon icon--tel" viewBox="0 0 18 18">
-                      <path
-                        d="M 16.554688 11.816406 C 15.453125 11.816406 14.371094 11.644531 13.347656 11.304688 C 12.84375 11.132812 12.226562 11.289062 11.917969 11.605469 L 9.894531 13.132812 C 7.546875 11.878906 6.101562 10.433594 4.867188 8.105469 L 6.347656 6.132812 C 6.734375 5.75 6.875 5.1875 6.707031 4.660156 C 6.367188 3.628906 6.195312 2.546875 6.195312 1.445312 C 6.195312 0.648438 5.546875 0 4.75 0 L 1.445312 0 C 0.648438 0 0 0.648438 0 1.445312 C 0 10.574219 7.425781 18 16.554688 18 C 17.351562 18 18 17.351562 18 16.554688 L 18 13.257812 C 18 12.460938 17.351562 11.816406 16.554688 11.816406 Z M 16.554688 11.816406 " />
-                    </svg>
-                  </span>
-                  <span>
-                    +38 (063)833 24 15
-                  </span>
-                  <span class="contacts__span">Call Online</span>
-                </a>
-              </li>
-
-            </ul>
-          </address>
-
-        </div>
       </div>
+    </div>
 
-      <div class="footer__bottom">
-        <p class="footer__copyright">© Designed by Yellow Snow. All Rights Reserved.</p>
-      </div>
-
-
-    </footer>
+    <div class="footer__bottom">
+      <p class="footer__copyright">© Designed by Yellow Snow. All Rights Reserved.</p>
+    </div>
 
 
-  </div>
+  </footer>
 
 
 
   <script src="js/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>

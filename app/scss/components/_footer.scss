@@ -27,6 +27,7 @@
     color: #737373;
     font-weight: 500;
 
-
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 }

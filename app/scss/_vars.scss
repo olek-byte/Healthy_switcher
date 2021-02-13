@@ -10,5 +10,117 @@ $dish-text: #85878C;
 $star: #F9AD3D;
 $accent-block: #4D4D4D;
 
+//for menu
+$toggle-size: 50px;
+$toggle-line-color: #696969;
+$toggle-line-focus-color: rgb(2, 122, 2);
+$toggle-line-size: $toggle-size/8;
+$toggle-line-angle: 405deg;
+$toggle-anim-speed: 0.9s;
+
 // $black-900: #000;
 // $black-800: #252525;
+
+%text-hiding {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// for media
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}
+
+//for menu
+@keyframes line-1 {
+  10% {
+    transform: translateZ(0) rotate(0)
+  }
+
+  80% {
+    transform: translateZ(0) rotate($toggle-line-angle - 10)
+  }
+
+  90%,
+  100% {
+    transform: translateZ(0) rotate($toggle-line-angle)
+  }
+}
+
+@keyframes line-2 {
+  10% {
+    transform: translateZ(0) rotate(0)
+  }
+
+  20% {
+    transform: translateZ(0) rotate(10deg)
+  }
+
+  90%,
+  100% {
+    transform: translateZ(0) rotate(-$toggle-line-angle)
+  }
+}
+
+@keyframes jump-1 {
+  10% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-$toggle-line-size * 12)
+  }
+
+  90%,
+  100% {
+    transform: translateY(-$toggle-line-size * 1)
+  }
+}
+
+@keyframes jump-2 {
+  10% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-$toggle-line-size * 10)
+  }
+
+  85%,
+  100% {
+    transform: translateY(-$toggle-line-size * 3)
+  }
+}
+
+@keyframes jump-3 {
+  10% {
+    transform: translateY(-$toggle-line-size*1) rotate(15deg)
+  }
+
+  30% {
+    transform: translateY(-$toggle-line-size*4) rotate(-10deg)
+  }
+
+  50% {
+    transform: translateY($toggle-line-size) rotate(5deg)
+  }
+
+  80% {
+    transform: translateY(0)
+  }
+}
+
+@keyframes glow {
+  50% {
+    box-shadow: rgba(lighten($toggle-line-color, 10%), 0.4) 0 0 2px 2px;
+  }
+}

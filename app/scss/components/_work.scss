@@ -2,19 +2,48 @@
   padding-bottom: 120px;
   background-color: $bg;
 
+  @include r(767) {
+    padding-bottom: 80px;
+  }
+
+  @include r(480) {
+    padding-bottom: 30px;
+  }
+
+  h3 {
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+
+  p {
+    @extend %text-hiding;
+    -webkit-line-clamp: 3;
+  }
+
+
   &__title {
     margin-bottom: 60px;
   }
 
   &__list {
     display: flex;
+
     flex-wrap: wrap;
     margin: 0 -15px;
+
+    @include r(1199) {
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
     max-width: 253px;
+    max-height: 206px;
     margin: 0 15px;
+
+    @include r(1199) {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -50,8 +79,8 @@
   &__name {
     position: relative;
     display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: 24px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.275px;
@@ -62,7 +91,7 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: 7px;
       left: 0;
       border-bottom: 2px solid $accent;
       width: 56px;

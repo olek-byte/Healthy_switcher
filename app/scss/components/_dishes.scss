@@ -7,17 +7,24 @@
 
   &__inner {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+
     margin: 0 -15px;
   }
 
   .dishes-card {
-    margin: 0 30px 30px 0;
+    position: relative;
+    margin: 15px;
     max-width: 350px;
+
     background-color: $slider;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
     border-radius: 6px;
+
+    @include r(480) {
+      max-width: 300px;
+    }
 
     &__link {
 
@@ -58,9 +65,7 @@
         }
       }
 
-      &:active{
-     
-
+      &:active {
         .icon {
           fill: $title;
         }
@@ -69,13 +74,12 @@
           color: $bg;
         }
       }
-
-
     }
 
-
     &__img {
+      max-height: 260px;
       border-radius: 6px 6px 0 0;
+
       transition: opacity 0.4s;
     }
 
@@ -83,6 +87,7 @@
       position: absolute;
       top: 19px;
       right: 22px;
+
       z-index: 100;
 
       &::after {
@@ -93,11 +98,12 @@
         top: 40%;
         right: -76%;
         transform: translateY(-50%);
+
         background-color: #C0BFBF;
         opacity: 0.3;
         border-radius: 50%;
-        transition: background-color 0.4s;
 
+        transition: background-color 0.4s;
       }
 
       .icon {
@@ -113,6 +119,10 @@
 
     &__content {
       padding: 30px 24px 24px 30px;
+
+      @include r(480) {
+        padding: 15px;
+      }
     }
 
     &__name {
@@ -121,19 +131,27 @@
       font-weight: 500;
       color: $title;
       transition: color 0.4s;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
 
     &__descr {
+      margin-bottom: 24px;
+
       letter-spacing: -0.15px;
       font-size: 12px;
       color: $dish-subtitle;
-      display: block;
-      margin-bottom: 24px;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
 
     &__text {
-      color: $dish-text;
       margin-bottom: 30px;
+      color: $dish-text;
+      @extend %text-hiding;
+      -webkit-line-clamp: 3;
     }
 
     &__bottom {
@@ -141,15 +159,21 @@
       align-items: center;
 
       span {
-        margin-right: 30px;
+        margin-right: 20px;
+
+        @include r(480) {
+          margin-right: 10px;
+          font-size: 13px;
+        }
       }
     }
 
     .star {
-      // white-space: nowrap;
-      // cursor: pointer;
       margin-right: 13px;
-    }
 
+      @include r(480) {
+        margin-right: 6px;
+      }
+    }
   }
 }

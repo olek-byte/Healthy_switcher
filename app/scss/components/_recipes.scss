@@ -2,18 +2,43 @@
   padding-bottom: 120px;
   background-color: $bg;
 
+  @include r(767) {
+    padding-bottom: 80px;
+  }
+
+  @include r(480) {
+    padding-bottom: 30px;
+  }
+
   &__title {
     margin-bottom: 120px;
+
+    @include r(767) {
+      margin-bottom: 80px;
+    }
+
+    @include r(480) {
+      margin-bottom: 50px;
+    }
   }
 
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @include r(991) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
     grid-row: span 1;
+
+    @include r(991) {
+      align-self: center;
+      justify-self: center;
+    }
 
     &:nth-child(1) {
       grid-row: span 3;
@@ -44,7 +69,15 @@
 
     &__link {
       padding: 72px 90px;
-      display: block;
+      display: inline-block;
+
+      @include r(1199) {
+        padding: 72px 25px;
+      }
+
+      @include r(480) {
+        padding: 40px 15px;
+      }
 
       &:hover {
         .icon {
@@ -92,6 +125,10 @@
         padding: 32px 30px 24px;
         transition: color 0.5s;
 
+        @include r(480) {
+          padding: 20px;
+        }
+
         &:hover {
           color: $slider;
 
@@ -106,15 +143,31 @@
         line-height: 1.9;
         text-align: left;
         margin-bottom: 10px;
+
+        @include r(480) {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
       }
 
       .recipes-card__bottom {
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include r(480) {
+          flex-direction: column;
+        }
       }
 
       .recipes-card__left {
         display: flex;
         align-items: center;
+
+        @include r(480) {
+          margin-bottom: 20px;
+          justify-content: flex-end;
+        }
       }
 
       .recipes-card__title {
@@ -128,9 +181,11 @@
 
       .recipes-card__right {
         display: flex;
+
+        @include r(480) {
+          justify-content: flex-end;
+        }
       }
-
-
     }
 
     &--image {
@@ -140,16 +195,16 @@
       &::before {
         content: '';
         position: absolute;
-        // background-image: url('../images/recipes-card-bg-2.jpg');
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
 
         border-radius: 6px;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
       }
 
       .recipes-card__link {
@@ -167,52 +222,68 @@
     }
 
     &__icon {
-      display: inline-block;
-      padding: 13px;
       position: absolute;
       top: 30px;
       right: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 13px;
+
       border-radius: 50%;
       background-color: #000;
       opacity: 0.3;
       border: none;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include r(480) {
+        right: 14px;
+      }
     }
 
-
     &__title {
-      margin-bottom: 70px;
-      padding: 8px 14px 6px;
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      border-radius: 6px;
 
+      margin-bottom: 70px;
+      padding: 8px 14px 6px;
 
       text-transform: uppercase;
       font-size: 10px;
+
       background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
       transition: all 0.5s;
     }
 
     &__time {
-      display: block;
       margin-bottom: 25px;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
 
     &__text {
+      margin-bottom: 45px;
+
       font-size: 24px;
       line-height: 1.7;
-      margin-bottom: 45px;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 3;
+
+      @include r(480) {
+        font-size: 17px;
+      }
     }
 
     &__author {
       margin-bottom: 70px;
-      display: block;
 
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
 
     &__bottom {
@@ -233,7 +304,6 @@
     &__comments {
       display: flex;
       align-items: center;
-
     }
 
     .icon {
@@ -255,8 +325,5 @@
         height: 20px;
       }
     }
-
   }
 }
-
-
