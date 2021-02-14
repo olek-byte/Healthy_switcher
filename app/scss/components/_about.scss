@@ -50,11 +50,12 @@
   .slick-track {
     display: flex;
     justify-content: space-between;
+
     align-items: center;
 
-    @include r(1199) {
-      justify-content: center;
-    }
+    // @include r(1199) {
+    //   justify-content: center;
+    // }
   }
 
   &__slider {
@@ -118,10 +119,11 @@
   }
 
   &__item {
-    margin: 0 16px;
+    display: flex !important;
+    justify-content: center;
 
     @include r(1199) {
-      margin: 0 auto;
+      // margin: 0 auto;
     }
 
     a {
