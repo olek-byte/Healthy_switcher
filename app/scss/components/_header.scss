@@ -45,7 +45,7 @@
     z-index: 1500;
     transition: opacity 0.5s;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   }
@@ -133,18 +133,21 @@
   z-index: 1500;
 }
 
-.header.fixed{
+.header.fixed {
   padding: 9px 0;
-  .header__inner::before{
+
+  .header__inner::before {
     border: none;
   }
 }
-.header.active{
+
+.header.active {
   padding: 20px 0;
   background-color: black;
   z-index: 110;
 }
-body.active{
+
+body.active {
   overflow: hidden;
 }
 
@@ -153,14 +156,16 @@ body.active{
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 5px;
+
   cursor: pointer;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding: 5px;
+
   background-color: transparent;
   border-color: transparent;
   outline: none;
   transform: translateZ(0);
+
   z-index: 1500;
   transition: transform 0.1s ease-out;
 
@@ -171,55 +176,54 @@ body.active{
   &:focus .line:after {
     background-color: $toggle-line-focus-color;
   }
-}
 
-.line {
-  display: block;
-  width: $toggle-size;
-  padding: $toggle-line-size/2;
 
-  &:after {
-    content: '';
+  &__line {
     display: block;
-    width: 100%;
-    height: $toggle-line-size;
-    background-color: $accent;
-    border-radius: 2px;
-    transform: translateZ(0) rotate(0);
-    transition: background-color 0.2s ease-out;
-  }
+    width: $toggle-size;
+    padding: $toggle-line-size/2;
 
-  .open & {
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        animation: jump-#{$i} $toggle-anim-speed forwards ease;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $toggle-line-size;
+      
+      background-color: $accent;
+      border-radius: 2px;
+      transform: translateZ(0) rotate(0);
+      transition: background-color 0.2s ease-out;
+    }
 
-        &:after {
-          animation: line-#{$i} $toggle-anim-speed forwards ease-in-out;
+    .open & {
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation: jump-#{$i} $toggle-anim-speed forwards ease;
+
+          &:after {
+            animation: line-#{$i} $toggle-anim-speed forwards ease-in-out;
+          }
         }
       }
     }
-  }
 
-  .close & {
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        animation: jump-#{$i} $toggle-anim-speed reverse ease;
+    .close & {
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation: jump-#{$i} $toggle-anim-speed reverse ease;
 
-        &:after {
-          animation: line-#{$i} $toggle-anim-speed reverse ease-in-out;
+          &:after {
+            animation: line-#{$i} $toggle-anim-speed reverse ease-in-out;
+          }
         }
       }
     }
-  }
 
-  .open &,
-  .close & {
-    &:nth-child(3) {
-      animation: jump-3 $toggle-anim-speed forwards ease-out;
+    .open &,
+    .close & {
+      &:nth-child(3) {
+        animation: jump-3 $toggle-anim-speed forwards ease-out;
+      }
     }
   }
 }
-
-
-

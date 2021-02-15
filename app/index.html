@@ -13,6 +13,7 @@
 
 <body>
 
+  <a class="overlay" id="form1" href="#"></a>
 
   <header class="header">
     <div class="header__inner">
@@ -22,9 +23,9 @@
 
 
           <button class="btn-toggle js__nav-btn">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <span class="btn-toggle__line"></span>
+            <span class="btn-toggle__line"></span>
+            <span class="btn-toggle__line"></span>
           </button>
 
 
@@ -92,16 +93,7 @@
             Order Now
           </a>
 
-          <a class="overlay" id="form1" href="#x"></a>
-          <form class="modal">
-            <input class="modal__name" name="name" placeholder="Your name:" required>
-            <input class="modal__email" name="email address" placeholder="Your Email:" type="email" required>
-            <textarea class="modal__message" name="subject" placeholder="Your message:" required></textarea>
-            <input class="modal__btn" name="submit" type="submit" value="Отправить">
-          </form>
-
         </div>
-
 
         <address class="page-top__address">
           <ul class="page-top__contacts contacts">
@@ -152,21 +144,9 @@
         </address>
 
       </div>
-
-
     </section>
 
-    <a class="scrollup js__scrollup">
-      <!-- <svg class="icon icon--scrollup">
-        <use xlink:href="images/sprite.svg#scrollup">
-        </use>
-      </svg> -->
 
-      <svg width="15pt" height="15pt" viewBox="0 0 15 15">
-        <path
-          d="M 7.441406 9.519531 C 6.308594 9.519531 5.394531 8.601562 5.394531 7.472656 C 5.394531 6.339844 6.308594 5.421875 7.441406 5.421875 C 8.574219 5.421875 9.488281 6.339844 9.488281 7.472656 C 9.488281 8.601562 8.574219 9.519531 7.441406 9.519531 Z M 7.441406 6.589844 C 6.957031 6.589844 6.5625 6.988281 6.5625 7.472656 C 6.5625 7.953125 6.957031 8.347656 7.441406 8.347656 C 7.925781 8.347656 8.320312 7.953125 8.320312 7.472656 C 8.320312 6.988281 7.925781 6.589844 7.441406 6.589844 Z M 10.546875 11.925781 L 9.722656 11.09375 L 7.472656 13.34375 L 5.308594 11.183594 L 4.480469 12.011719 L 7.472656 15 Z M 10.546875 3.074219 L 7.472656 0 L 4.453125 3.019531 L 5.277344 3.847656 L 7.472656 1.65625 L 9.722656 3.90625 Z M 10.546875 3.074219">
-      </svg>
-    </a>
 
     <section class="about">
 
@@ -1023,9 +1003,34 @@
       <p class="footer__copyright">© Designed by Yellow Snow. All Rights Reserved.</p>
     </div>
 
-
   </footer>
 
+  <a class="scrollup js__scrollup">
+    <!-- <svg class="icon icon--scrollup">
+        <use xlink:href="images/sprite.svg#scrollup">
+        </use>
+      </svg> -->
+
+    <svg width="15pt" height="15pt" viewBox="0 0 15 15">
+      <path
+        d="M 7.441406 9.519531 C 6.308594 9.519531 5.394531 8.601562 5.394531 7.472656 C 5.394531 6.339844 6.308594 5.421875 7.441406 5.421875 C 8.574219 5.421875 9.488281 6.339844 9.488281 7.472656 C 9.488281 8.601562 8.574219 9.519531 7.441406 9.519531 Z M 7.441406 6.589844 C 6.957031 6.589844 6.5625 6.988281 6.5625 7.472656 C 6.5625 7.953125 6.957031 8.347656 7.441406 8.347656 C 7.925781 8.347656 8.320312 7.953125 8.320312 7.472656 C 8.320312 6.988281 7.925781 6.589844 7.441406 6.589844 Z M 10.546875 11.925781 L 9.722656 11.09375 L 7.472656 13.34375 L 5.308594 11.183594 L 4.480469 12.011719 L 7.472656 15 Z M 10.546875 3.074219 L 7.472656 0 L 4.453125 3.019531 L 5.277344 3.847656 L 7.472656 1.65625 L 9.722656 3.90625 Z M 10.546875 3.074219">
+    </svg>
+  </a>
+
+  <div class="modal">
+    <form class="modal__form">
+      <label class="modal__label">
+        <input class="modal__name" name="name" placeholder="Your name:" required>
+      </label>
+      <label class="modal__label">
+        <input class="modal__email" name="email address" placeholder="Your Email:" type="email" required>
+      </label>
+      <label class="modal__label">
+        <textarea class="modal__message" name="subject" placeholder="Your message:" required></textarea>
+      </label>
+      <button class="modal__btn" type="submit">To send</button>
+    </form>
+  </div>
 
 
   <script src="js/main.min.js"></script>

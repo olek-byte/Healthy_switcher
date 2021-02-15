@@ -132,39 +132,40 @@ body {
   }
 }
 
-
 //Modal window
 .modal {
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 50%;
-  z-index: 10001;
+  &__form {
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 50%;
+    z-index: 10001;
 
-  opacity: 0;
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  transition: opacity 500ms ease-in;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 500ms ease-in;
 
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 30px 30px 6px 30px;
-  min-width: 320px;
-  max-width: 520px;
-  width: 100%;
-  border: 1px solid rgba(120, 120, 120, .7);
-  border-radius: 5px;
-  background: rgba(60, 63, 65, 0.9);
-  background-clip: padding-box;
-  box-shadow: 0 0 13px 3px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 30px 30px 6px 30px;
+    min-width: 320px;
+    max-width: 520px;
+    width: 100%;
+    border: 1px solid rgba(120, 120, 120, .7);
+    border-radius: 5px;
+    background-color: rgba(60, 63, 65, 0.9);
+    background-clip: padding-box;
+    box-shadow: 0 0 13px 3px rgba(0, 0, 0, .5);
 
-  @include r(767) {
-    width: 85%;
-  }
+    @include r(767) {
+      width: 85%;
+    }
 
-  @include r(480) {
-    min-width: 280px;
+    @include r(480) {
+      min-width: 280px;
+    }
   }
 
 
@@ -261,19 +262,19 @@ body {
     border-radius: 6px;
     box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(255, 255, 255, 0.7) 0 1px 0;
     color: #e1e1e1;
-  }
 
-  &__btn:hover {
-    border: 1px solid #253737;
-    background-color: $accent;
-    color: #000;
-  }
+    &:hover {
+      border: 1px solid #253737;
+      background-color: $accent;
+      color: #000;
+    }
 
-  &__btn:active {
-    margin-top: 1px;
-    border: 1px solid #333333;
-    background-color: #ffCC00;
-    color: #fff;
+    &:active {
+      margin-top: 1px;
+      border: 1px solid #333333;
+      background-color: #ffCC00;
+      color: #fff;
+    }
   }
 }
 
@@ -296,7 +297,7 @@ body {
 }
 
 
-.overlay:target+.modal {
+.overlay:target~.modal {
   top: 0;
   visibility: visible;
   opacity: 1;
