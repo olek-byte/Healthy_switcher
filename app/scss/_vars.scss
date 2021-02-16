@@ -27,6 +27,12 @@ $toggle-anim-speed: 0.9s;
   overflow: hidden;
 }
 
+$width1: 1199;
+$width2: 991;
+$width3: 767;
+$width4: 480;
+$height1: 320;
+
 // for media
 @mixin r($width) {
   @media only screen and (max-width: $width+ "px") {
@@ -36,6 +42,12 @@ $toggle-anim-speed: 0.9s;
 
 @mixin rmin($width) {
   @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin d($height) {
+  @media only screen and (max-height: $height+ "px") {
     @content;
   }
 }

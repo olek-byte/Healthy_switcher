@@ -6,10 +6,13 @@
   font-style: normal;
   transform: translateX(-3%);
 
-  @include r(667) {
+  @include r($width3) {
     flex-wrap: wrap;
-    transform: translateX(0%);
   }
+
+    @include r($width4) {
+      transform: translateX(0%);
+    }
 
   &__item {
     display: flex;
@@ -24,15 +27,12 @@
 
     color: #fff;
 
-    @include r(767) {
+    @include r($width3) {
       font-size: 14px;
-    }
-
-    @include r(667) {
       margin: 0 10px 30px;
     }
 
-    @include r(480) {
+    @include r($width4) {
       width: 100%;
     }
 
@@ -47,19 +47,19 @@
   &__link {
     transition: color 0.6s;
 
+     &:focus {
+       color: $star;
+
+       svg {
+         fill: $star;
+       }
+     }
+
     &:hover {
       color: $accent;
 
       svg {
         fill: $accent;
-      }
-    }
-
-    &:focus {
-      color: $star;
-
-      svg {
-        fill: $star;
       }
     }
 

@@ -1,27 +1,52 @@
 .header {
-  padding: 32px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
   background-color: transparent;
+  transition: background-color 0.6s;
 
-  @include r(667) {
-    padding: 18px 0;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+    background-color: #000;
+    z-index: 1500;
+
+    .header__inner {
+      padding: 10px 0;
+
+      &::before {
+        border: none;
+      }
+    }
+  }
+
+  &.active {
+    background-color: #000;
   }
 
   &__inner {
     position: relative;
+    padding: 32px 0;
     z-index: 200;
+
+    @include r($width2){
+      padding: 15px 0;
+    }
 
     &::before {
       content: '';
       position: absolute;
-      bottom: -33px;
+      bottom: 0;
       right: 0;
       border-bottom: 1px solid #fff;
       opacity: 0.1;
       width: 100%;
-
-      @include r(667) {
-        bottom: -18px;
-      }
     }
   }
 
@@ -33,7 +58,7 @@
     .btn-toggle {
       display: none;
 
-      @include r(667) {
+      @include r($width3) {
         display: block;
         order: 1;
       }
@@ -54,15 +79,32 @@
     display: flex;
     transition: all 0.7s;
 
-    @include r(667) {
+    @include r($width3) {
       position: absolute;
       display: block;
       margin: 0 -15px;
 
       background-color: $bg;
-
-      transform: translateY(-150%);
+      width: 100%;
+      transform: translateY(-100%);
       z-index: 1100;
+    }
+
+    &.active {
+      padding-top: 130px;
+      height: 100vh;
+
+      transform: translateY(43%);
+      background-color: #000;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      z-index: 300;
+
+      @include d($height1) {
+        padding-top: 72px;
+      }
     }
   }
 
@@ -70,7 +112,7 @@
     &:not(:last-child) {
       margin-right: 36px;
 
-      @include r(667) {
+      @include r($width3) {
         margin-right: 0;
       }
     }
@@ -82,7 +124,7 @@
     color: #fff;
     transition: all 0.5s;
 
-    @include r(667) {
+    @include r($width3) {
       display: block;
       padding: 13px 0;
 
@@ -91,16 +133,16 @@
       transition: border-bottom 0.5s;
     }
 
+    &:focus {
+      color: $star;
+    }
+
     &:hover {
       color: $accent;
 
-      @include r(667) {
+      @include r($width3) {
         border-bottom: 1px solid $accent;
       }
-    }
-
-    &:focus {
-      color: $star;
     }
 
     &:active {
@@ -109,46 +151,8 @@
   }
 }
 
-.header__list.active {
-  padding-top: 130px;
-
-  width: 100%;
-  height: 100vh;
-
-  transform: translateY(43%);
-  background-color: #000;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
-  background-color: #000;
-  z-index: 1500;
-}
-
-.header.fixed {
-  padding: 9px 0;
-
-  .header__inner::before {
-    border: none;
-  }
-}
-
-.header.active {
-  padding: 20px 0;
-  background-color: black;
-  z-index: 110;
-}
-
-body.active {
-  overflow: hidden;
+.btn-toggle.open{
+  transform: translateY(20%);
 }
 
 //Hamburger
@@ -169,14 +173,13 @@ body.active {
   z-index: 1500;
   transition: transform 0.1s ease-out;
 
-  &:active {
-    transform: translateY(4px);
-  }
-
   &:focus .line:after {
     background-color: $toggle-line-focus-color;
   }
 
+  &:active {
+    transform: translateY(4px);
+  }
 
   &__line {
     display: block;
@@ -188,7 +191,7 @@ body.active {
       display: block;
       width: 100%;
       height: $toggle-line-size;
-      
+
       background-color: $accent;
       border-radius: 2px;
       transform: translateZ(0) rotate(0);
