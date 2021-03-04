@@ -1,7 +1,5 @@
 $(function () {
 
- 
-
   //Fixed position
   let header = $('.header');
   let products = $('.page-top');
@@ -146,6 +144,6 @@ $(function () {
   new ImageZoom(document.querySelector(".js__zoom-small--6"), options);
 
 
+  new WOW().init();
 
-   new WOW().init();
 });

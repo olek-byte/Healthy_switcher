@@ -86,29 +86,16 @@ function styles() {
 function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
-
-      'node_modules/slick-carousel/slick/slick.js',
-      // 'node_modules/slick-carousel/slick/slick.min.js',
- 
-      'node_modules/rateyo/src/jquery.rateyo.js',
-      // 'node_modules/rateyo/min/jquery.rateyo.min.js',
-
-      'node_modules/wow.js/src/WOW.js',
-      // 'node_modules/wow.js/dist/wow.min.js',
-
-      
-      // 'node_modules/simplebar/dist/simplebar.min.js',
-      // 'node_modules/simplebar/dist/simplebar.js',
-      'node_modules/simplebar/src/simplebar.js',
-
+      'node_modules/slick-carousel/slick/slick.min.js',
+      'node_modules/rateyo/min/jquery.rateyo.min.js',
+      'node_modules/wow.js/dist/wow.min.js',
+      'node_modules/simplebar/dist/simplebar.min.js',
       'node_modules/js-image-zoom/js-image-zoom.js',
-        
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
-  // .pipe(browserSync.stream())
 }
 
 function images() {
